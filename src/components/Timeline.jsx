@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-export const Timeline = ({ checkpoints, title, subtitle }) => {
+const Timeline = ({ checkpoints, title, subtitle }) => {
   const [position, setPosition] = useState(5);
   const [isDragging, setIsDragging] = useState(false);
   const [activeCheckpoint, setActiveCheckpoint] = useState(0);
@@ -368,3 +368,5 @@ export const Timeline = ({ checkpoints, title, subtitle }) => {
     </div>
   );
 };
+
+export default Timeline;
