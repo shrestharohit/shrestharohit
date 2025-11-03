@@ -112,8 +112,8 @@ export default function PRJourney() {
   return (
     <Timeline
       checkpoints={checkpoints}
-      title="Career Timeline"
-      subtitle="Track your career progress"
+      title="Australian PR Journey"
+      subtitle="Interactive timeline of your adventure"
     />
   );
 }
