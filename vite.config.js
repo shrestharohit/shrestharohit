@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
-  base: '/shrestharohit/',
+  base: '/',
   server: {
     open: true, // optional, opens browser on start
   },
