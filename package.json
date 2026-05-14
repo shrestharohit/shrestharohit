@@ -6,6 +6,8 @@
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist"
   },
+  "type": "module",
+  "homepage": "https://shrestharohit.github.io/shrestharohit",
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
     "react": "^19.2.0",
