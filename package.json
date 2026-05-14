@@ -1,13 +1,8 @@
 {
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "predeploy": "yarn build",
-    "deploy": "gh-pages -d dist"
+    "build": "vite build"
   },
-  "type": "module",
-  "homepage": "https://shrestharohit.github.io/shrestharohit",
   "dependencies": {
     "@tailwindcss/vite": "^4.1.16",
     "react": "^19.2.0",
