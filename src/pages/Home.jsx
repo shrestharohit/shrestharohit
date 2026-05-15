@@ -4,13 +4,40 @@ export default function Home() {
   const fullName = "Rohit Shrestha";
   const fullSubtitle = "DevOps Engineering Assistant @ UON";
   const nameRef = useRef(null);
+  const mainRef = useRef(null);
 
   useEffect(() => {
     document.title = "Rohit Shrestha - Portfolio";
   }, []);
 
+  const createRipple = (event) => {
+    // Don't create ripple if hovering over nav elements
+    if (event.target.closest('nav') || event.target.closest('a[href]')) {
+      return;
+    }
+
+    const main = mainRef.current;
+    const rect = main.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    const ripple = document.createElement('span');
+    ripple.classList.add('ripple');
+    ripple.style.left = (x - 30) + 'px';
+    ripple.style.top = (y - 30) + 'px';
+
+    main.appendChild(ripple);
+
+    // Remove ripple after animation completes
+    setTimeout(() => ripple.remove(), 1200);
+  };
+
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-cyan-300 via-slate-50 to-emerald-200 pt-16">
+    <main
+      ref={mainRef}
+      onMouseMove={createRipple}
+      className="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-cyan-300 via-slate-50 to-emerald-200 pt-16 overflow-hidden"
+    >
       <div className="relative max-w-4xl px-6 text-center">
         <div className="absolute inset-0 bg-white/40 blur-3xl rounded-full opacity-30" />
         

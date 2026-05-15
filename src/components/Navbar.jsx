@@ -11,9 +11,9 @@ export default function Navbar() {
           {/* Logo/Brand */}
           <Link
             to="/"
-            className="text-2xl font-bold text-slate-700 hover:text-slate-900 transition-colors"
+            className="flex items-center justify-center"
           >
-            Rohit
+            <span className="text-2xl font-asteria tracking-wide text-slate-700">Rohitstha_</span>
           </Link>
 
           {/* Desktop Navigation */}

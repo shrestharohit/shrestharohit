@@ -134,8 +134,7 @@ export default function Contact() {
                 Other Ways to Reach Me
               </h2>
               <div className="space-y-2 text-slate-600">
-                <p>Email: contact@rohitshrestha.com</p>
-                <p>Phone: +1 (555) 123-4567</p>
+                <p>Email: rohitshr98@gmail.com</p>
               </div>
             </div>
           </div>
