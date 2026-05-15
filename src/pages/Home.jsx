@@ -10,7 +10,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-cyan-300 via-slate-50 to-emerald-200">
+    <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-cyan-300 via-slate-50 to-emerald-200 pt-16">
       <div className="relative max-w-4xl px-6 text-center">
         <div className="absolute inset-0 bg-white/40 blur-3xl rounded-full opacity-30" />
         
