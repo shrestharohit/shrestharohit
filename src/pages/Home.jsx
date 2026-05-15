@@ -18,8 +18,9 @@ export default function Home() {
 
     const main = mainRef.current;
     const rect = main.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
+    const point = event.touches?.[0] ?? event.changedTouches?.[0] ?? event;
+    const x = point.clientX - rect.left;
+    const y = point.clientY - rect.top;
 
     const ripple = document.createElement('span');
     ripple.classList.add('ripple');
@@ -35,7 +36,9 @@ export default function Home() {
   return (
     <main
       ref={mainRef}
-      onMouseMove={createRipple}
+      onPointerMove={createRipple}
+      onPointerDown={createRipple}
+      onTouchStart={createRipple}
       className="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-cyan-300 via-slate-50 to-emerald-200 pt-16 overflow-hidden"
     >
       <div className="relative max-w-4xl px-6 text-center">
